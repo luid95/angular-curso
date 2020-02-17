@@ -1,0 +1,8 @@
+git init
+
+git status
+git add .
+git status
+git commit -m "clases y constructores .ts"
+git remote add origin https://github.com/luid95/angular-curso.git
+git push -u origin master
