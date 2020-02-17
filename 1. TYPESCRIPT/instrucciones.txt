@@ -1,0 +1,11 @@
+1.- Para convertir archivos .ts en .js se ejecuta la siguiente instruccion:
+        tsc nombre_archivo.ts 
+2.- Para no ejecutar cada modificacion realizada en el archivo .ts lo ejecutamos con un escucha para compilar cada vez
+    que haya un cambio en el archivo con la siguiente instruccion:
+        tsc nombre_archivo.ts -w
+3.- Para cerrar el escucha solo presionamos ctrl + c.
+
+4./ para seleccionar la carpetar de puro typescript con el siguiente comando:
+    tsc -init y creara un archivo tsconfig.json
+5.- Para tener un observador en toda mi carpeta de typescript ejecutamos el siguiente comando:
+    tsc -w
