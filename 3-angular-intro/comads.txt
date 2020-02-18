@@ -1,0 +1,11 @@
+//crear nuevo proyecto
+1. ng new my-app
+
+//levantar un servidor
+ng serve --open
+
+//crear un nuevo componente
+//ng notacion
+//g generate
+//c component
+ng g c #name_component
