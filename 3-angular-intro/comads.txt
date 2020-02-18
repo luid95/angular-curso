@@ -9,3 +9,6 @@ ng serve --open
 //g generate
 //c component
 ng g c #name_component
+
+
+//Directiva ngIf

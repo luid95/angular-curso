@@ -3,7 +3,7 @@ git init
 git status
 git add .
 git status
-git commit -m "creando app-angular y componentes"
+git commit -m "Directiva ngIf"
 git remote add origin https://github.com/luid95/angular-curso.git
 git push -u origin master
 
