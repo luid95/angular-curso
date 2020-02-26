@@ -3,10 +3,10 @@ git init
 git status
 git add .
 git status
-git commit -m "Directiva ngIf"
+git commit -m "Directiva ngClass"
 git remote add origin https://github.com/luid95/angular-curso.git
 git push -u origin master
 
 
 
-video 11 listo
+video 13 listo

@@ -3,18 +3,49 @@
 <h1 class="container bg-dark text-white text-center my-4 py-4" >ngIf show ={{ show }} </h1>
 
 <div class="container">
-  <button class="btn btn-warning" (click)="show=!show">Accion</button>
+  <button class="btn btn-warning" (click)="show= !show">Accion</button>
+  <!-- con el ; se hace referencia al else ddl ngIf -->
+  <p class="text-info" *ngIf="show ; else showDos">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Repellat ducimus, optio itaque corrupti voluptates ad dolorum tempora expedita consequatur, 
+    ex a quia illum quisquam nostrum neque sunt vitae quo. Tenetur.
+  </p>
+  <!-- declaramos un ng-template con el nombre de la segunda variable -->
+  <ng-template #showDos>
+    <p class="text-danger">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Repellat ducimus, optio itaque corrupti voluptates ad dolorum tempora expedita consequatur, 
+      ex a quia illum quisquam nostrum neque sunt vitae quo. Tenetur.
+    </p>
+  </ng-template>
   
-  <p class="text-info" *ngIf="show">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Repellat ducimus, optio itaque corrupti voluptates ad dolorum tempora expedita consequatur, 
-    ex a quia illum quisquam nostrum neque sunt vitae quo. Tenetur.
-  </p>
-  <p class="text-danger">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Repellat ducimus, optio itaque corrupti voluptates ad dolorum tempora expedita consequatur, 
-    ex a quia illum quisquam nostrum neque sunt vitae quo. Tenetur.
-  </p>
 </div>
+
+<h1 class="container bg-dark text-white text-center my-4 py-4" >[ngClass]</h1>
+
+<div class="container">
+
+  <button class="btn btn-dark mb-3" (click)="activo='primero'">Primero</button>
+  <button class="btn btn-danger mb-3" (click)="activo='segundo'">Segundo</button>
+
+  <!-- se le asigna una variable para manipular cualquier etiqueta, o comillas simples si queremos
+        agregar texto [string] "'string'"  -->
+        <!-- d-none : oculta contenido
+              d-block : muestra contenido -->
+  <p class="text-info d-none" [ngClass]="{'d-block': activo=='primero'}" >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Repellat ducimus, optio itaque corrupti voluptates ad dolorum tempora expedita consequatur, 
+    ex a quia illum quisquam nostrum neque sunt vitae quo. Tenetur.
+  </p>
+
+  <p class="text-danger d-none" [ngClass]="{'d-block': activo=='segundo'}">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Repellat ducimus, optio itaque corrupti voluptates ad dolorum tempora expedita consequatur, 
+    ex a quia illum quisquam nostrum neque sunt vitae quo. Tenetur.
+  </p>
+
+  
+</div>
+
 
 <app-footer></app-footer>

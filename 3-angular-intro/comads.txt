@@ -11,4 +11,4 @@ ng serve --open
 ng g c #name_component
 
 
-//Directiva ngIf
+//Directiva ngIf and ngIf-else
